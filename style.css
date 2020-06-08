@@ -1,0 +1,133 @@
+/*font family */
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+/*basic css reset */
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box ;
+}
+body{
+  min-height: 100vh;
+  background:#f5f5f5;
+}
+article.article{
+  font-family: 'Play', sans-serif;
+  position:absolute ;
+  width:90%;
+  left : 50% ;
+  top :20vh;
+  margin-left :-45%;
+}
+/*check in section */
+section.checkIn{
+  display :grid;
+  grid-template-columns :1fr ;
+  justify-items:center ;
+  align-items: center ;
+  color:#000;
+  grid-gap: 2.5rem ;
+  background: #fff;
+  padding: 2rem;
+}
+
+div.cheeckIn-box{
+  
+  text-align:center;
+}
+p.checkIn-arrival{
+  font-weight :bold ;
+  text-transform :uppercase;
+  text-align: center ;
+  font-size:14px;
+}
+p.checkIn-inDate{
+  width: auto ;
+  height :2.75rem;
+  border :1px solid #000 ;
+  text-align:center;
+  padding :0.75rem;
+  font-weight: normal;
+  margin-top :0.7rem ;
+  font-size :14px;
+}
+/*check in search button*/
+#search{
+  width: 8rem ;
+  height :2.75rem ;
+  display :block ;
+  padding: 0.75;
+  background:#db8837;
+  color:#fff;
+  font-weight: bold;
+  outline :none ;
+  border :none ;
+  font-family:inherit;
+}
+
+section.grey{
+  background :#f5f5f5;
+  margin-top: 2rem ;
+  padding-top: 2rem;
+}
+/*check in image */
+img.checkIn-image{
+  width: 100%;
+  height: auto ;
+  
+}
+
+div.checkIn-writeUp{
+ 
+ width: 100%;
+}
+p.checkIn-welcome{
+  width :100%;
+  font-weight: bold ;
+  font-size: 30px;
+}
+p.checkIn-para{
+  
+}
+
+/**********MEDIA QUERIES **********/
+@media all and (min-width:560px){
+  article.article{
+    width:70%;
+    margin-left :-35%;
+  }
+  section.checkIn{
+    display:grid;
+    grid-template-columns:3fr 3fr 3fr 3fr 3fr;
+  }
+  div.cheeckIn-box{
+  text-align:center;
+}
+p.checkIn-arrival{
+  font-weight :bold ;
+  text-transform :uppercase;
+  text-align: center ;
+  font-size :10px;
+}
+p.checkIn-inDate{
+  font-size :7px;
+  width: auto;
+  height :auto ;
+}
+/*check in search button*/
+#search{
+  width: 8rem ;
+  height :2.75rem ;
+  display :block ;
+  padding: 0.75;
+  background:#db8837;
+  color:#fff;
+  font-weight: bold;
+  outline :none ;
+  border :none ;
+  font-family:inherit;
+}
+section.grey{
+  grid-template-columns :1fr 1fr!important ;
+  grid-column-gap: 3rem ;
+}
+}
