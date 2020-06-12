@@ -1,23 +1,166 @@
 /*font family */
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
 /*basic css reset */
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box ;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  
 }
-body{
-  min-height: 100vh;
-  background:#f5f5f5;
-  font-size: 16px;
+
+.logo-image {
+  width: 180px;
+  /* height: 66px; */
+
+  overflow: hidden;
+  margin-top: -6px;
 }
+
+body {
+  font-family: 'Play', Sans-Serif;
+  color:#fff;
+}
+
+section.main{
+  min-width: 100% ;
+position: relative;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("base.jpg");
+margin-bottom: 40rem;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+    background-position: center;
+    color:#fff ;
+}
+
+nav {
+  
+  padding: 0px 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: #fff ;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #db8837 ;
+}
+
+.menu li {
+  font-size: 1.2rem ;
+  padding: 5px 5px;
+}
+
+.menu li a {
+  display: inline;
+}
+
+.logo a {
+  font-size: 2.25rem ;
+}
+
+
+/* mobile menu */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle {
+  order: 1;
+}
+
+.item.button {
+  order: 2;
+}
+
+.item {
+  width: 100%;
+  text-align: center;
+  order: 3;
+  display: none;
+}
+
+.item.active {
+  display: block;
+}
+
+.toggle {
+  cursor: pointer;
+}
+
+
+.bars {
+  background: #fff;
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  width: 2rem;
+}
+
+.bars::before,
+.bars::after {
+  background: #999;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  position: absolute;
+  width: 2rem;
+  background :#fff;
+}
+
+.bars::before {
+  top: 7px;
+}
+
+.bars::after {
+  top: -7px;
+}
+
+p.j-text{
+  font-size: 2rem ;
+  font-weight: bolder ;
+  margin-top: 17%;
+}
+
+div.star-con{
+  display:flex;
+  flex:row;
+  color:#fff;
+  justify-content:center ;
+  align-items: center;
+}
+div.line1 hr,
+div.line2 hr,
+hr{
+  width: 80px;
+  height: 1px;
+  background-color: #fff;
+  color: white;
+  margin-top: 15px;
+  text-align: center ;
+}
+
+
 article.article{
   font-family: 'Play', sans-serif;
   position:absolute ;
-  width:90%;
+  width:80%;
   left : 50% ;
-  top :20vh;
-  margin-left :-45%;
+  top :90%;
+  margin-left :-40%;
 }
 /*check in section */
 section.checkIn{
@@ -63,12 +206,13 @@ p.checkIn-inDate{
   outline :none ;
   border :none ;
   font-family:inherit;
+  cursor: pointer;
 }
 
 section.grey{
   background :#f5f5f5;
   margin-top: 2rem ;
-  padding-top: 2rem;
+  padding-top: 2rem 0 0 0;
 }
 /*check in image */
 img.checkIn-image{
@@ -88,102 +232,405 @@ p.checkIn-welcome{
 p.checkIn-para{
   line-height: 1.5; 
 }
-
-/**********MEDIA QUERIES **********/
-/*tablet**/
-@media all and (min-width:760px){
-  article.article{
-    width:70%;
-    margin-left :-35%;
-  }
-  section.checkIn{
-    display:grid;
-    grid-template-columns:3fr 3fr;
-  }
-  div.cheeckIn-box{
-  text-align:center;
+h2.rooms-suites,
+h2,
+p.rooms-suites-para{
+  color: #000 !important;
 }
-  p.checkIn-arrival{
-    font-weight :bold ;
-    text-transform :uppercase;
-    text-align: center ;
-    font-size :1rem;
+section.room-pic{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 10rem;
+}
+div.room1{
+  margin: 0 auto ;
+}
+div.room1 img{
+  width: 290px;
+  height:400PX;
+  padding: 1.5rem 0;
+}
+p.describe{
+  color: #db8837;
+}
+#book{
+  width: 12rem ;
+  height :2.75rem ;
+  display :block ;
+  padding: 0.75;
+  background:#db8837;
+  color:#fff;
+  font-weight: bold;
+  outline :none ;
+  border :none ;
+  font-family:inherit;
+  cursor: pointer;
+}
+section.facilities{
+  background: #db8837;
+  
+}section.facilities h2,
+section.facilities p
+{
+  color: #fff !important;
+
+}
+
+/*footer section*/
+footer.footer{
+  width: 100%;
+  background-color: #333;
+}
+
+  div.escape{
+  display: grid;
+  grid-template-columns: 1fr; 
+  grid-gap: .5rem;
+  
+  color: #fff !important;
+  padding: 1.5rem 0.5rem;
+  
+}
+a.privacy{
+  color:#fff;
+  text-decoration: none;
+}
+a.privacy:hover{
+  color: #db8837;
+}
+input[type=text]{
+
+	width: 80%;
+  color: #fff ;
+	height: 40px;
+	border: 0.5px solid #FFFFFF;
+	box-sizing: border-box;
+	background-color: transparent;
+	padding-left: 1%;
+}
+input[type=submit]{
+  background: #db8837;
+	width: auto;
+  color: #fff;
+	height: auto;
+	margin-left: auto;
+	margin-top: 1rem ;
+	padding: 2%;
+	border :none;
+	outline: none;
+	font-family: 'Play', Sans-Serif ;
+}
+input::placeholder{
+  color:#fff;
+}
+
+.newsletter {
+	margin-top: 5%;
+}
+.copyright{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+.copy2 a{
+  padding: 0 0.25rem;
+}
+
+/* tablet menu */
+
+@media all and (min-width: 468px) {
+  .menu {
+    justify-content: center;
   }
-  p.checkIn-inDate{
-    font-size :1rem;
+
+  .logo {
+    flex: 1;
+  }
+
+  .item.button {
     width: auto;
-    height :auto ;
+    order: 1;
     display: block;
-    margin: 1rem auto;
-}
-p.number{
-  width: 2.75rem !important;
-  height: 2.75rem !important;
-  text-align: center;
-}
-  /*check in search button*/
-  #search{
-    width: 8rem ;
-    height :2.75rem ;
-    display :block ;
-    padding: 0.75;
-    background:#db8837;
-    color:#fff;
-    font-weight: bold;
-    outline :none ;
-    border :none ;
-    font-family:inherit;
   }
-  section.grey{
-    grid-template-columns :1fr!important ;
-    grid-column-gap: 3rem ;
+
+  .toggle {
+    order: 2;
+  }
+
+  .button.secondary {
+    border: 0;
+  }
+
+  .button a {
+    padding: 7px 15px;
+    background: rgb(63, 99, 197);
+    border: 1px solid rgb(63, 99, 197);
+    color: white;
+    border-radius: 50em;
+    text-decoration: none;
+  }
+
+  .button.secondary a {
+    background: transparent;
+    color: rgb(63, 99, 197);
+  }
+
+  .button a:hover {
+    transition: all 0.25s;
+  }
+
+  .button:not(.secondary) a:hover {
+    background: rgb(63, 99, 197);
+    border-color: rgb(89, 118, 197);
   }
 }
 
-/*laptop*/
-@media all and (min-width:992px){
-  article.article{
-    width:70%;
-    margin-left :-35%;
+@media all and (min-width: 768px) {
+  .item {
+    display: block;
+    width: auto;
   }
+
+  .toggle {
+    display: none;
+  }
+
+  .logo {
+    order: 0;
+  }
+
+  .item {
+    order: 1;
+  }
+
+  .button {
+    order: 2;
+  }
+
+  .menu li {
+    padding: 15px 10px;
+  }
+
+  .menu li.button {
+    padding-right: 0;
+  }
+  div.paragraph{
+    font-size: 150%;
+  }
+
   section.checkIn{
-    display:grid;
-    grid-template-columns:repeat(5, 3fr);
+    display :grid;
+    grid-template-columns :1fr 1fr;
   }
-  div.cheeckIn-box{
-  text-align:center;
-}
+
+  section.main{
+     margin-bottom: 29rem;
+  }
+
+  section.grey{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 4rem !important;
+  }
+
+  img.checkIn-image{
+    width: 100%;
+    height: auto ;
+  }
+  p.checkIn-welcome{
+    width :100%;
+    font-weight: bold ;
+    font-size: 50px;
+    padding-bottom: 0.25rem;
+  }
+  p.checkIn-para{
+    line-height: 1.5; 
+    font-size: 150%;
+  }
   p.checkIn-arrival{
-    font-weight :bold ;
-    text-transform :uppercase;
-    text-align: center ;
-    font-size :1rem;
+    font-size:1.5rem;
   }
   p.checkIn-inDate{
-    font-size :1rem;
-    width: auto;
-    height :auto ;
-}
-p.number{
-  width: 2.75rem !important;
-  height: 2.75rem !important;
-  text-align: center;
-}
+    width: auto ;
+    height :5rem;
+    padding :1.5rem;
+    font-size :1.5rem;
+  }
   /*check in search button*/
   #search{
-    width: 8rem ;
-    height :2.75rem ;
-    display :block ;
-    padding: 0.75;
-    background:#db8837;
-    color:#fff;
-    font-weight: bold;
-    outline :none ;
-    border :none ;
-    font-family:inherit;
+    width: 10rem ;
+    height :4.75rem ;
+    font-size :1.5rem;
   }
+  h2.rooms-suites
+  {
+    font-size: 350% !important;
+  }
+
+  p.rooms-suites-para{
+    font-size: 150% !important;
+  }
+  div.room1 img{
+    width: 490px;
+    height:600PX;
+  }
+  #book{
+    width: 14rem ;
+    height :4.75rem ;
+    font-size: 2rem;
+  }
+  
+  div.esc{
+    display: grid;
+    grid-template-columns:3fr 1fr;
+  }
+  input[type=text]{
+	width: 50%;
+  color: #fff ;
+	height: 45px;
+}
+input[type=submit]{
+	margin-left: 2rem;
+}
+  .copyright{
+
+  display: grid;
+
+  grid-template-columns:1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+  .copy2 a{
+
+  padding: 0 0.25rem;
+
+}
+}
+/* END OF NAV BAR */
+@media all and (min-width: 992px) {
+ p.j-text{
+    font-size:450%;
+  }
+  div.stars{
+    font-size :250%;
+  }
+  
+  div.line1 hr,
+  div.line2 hr{
+  width:150px;
+  height: 3px;
+  background-color: #fff;
+  color: white;
+  margin-top: 15px;
+  text-align: center ;
+}
+
+  div.paragraph{
+    font-size: 120%;
+  }
+
+  section.checkIn{
+    display :grid;
+    grid-template-columns :repeat(5, 1fr);
+  }
+
+  section.main{
+     margin-bottom: 12rem;
+  }
+
   section.grey{
-    grid-template-columns :1fr 1fr!important ;
-    grid-column-gap: 3rem ;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 4rem !important;
   }
+
+  img.checkIn-image{
+    width: 100%;
+    height: auto ;
+  }
+  p.checkIn-welcome{
+    width :100%;
+    font-weight: bold ;
+    font-size: 25px;
+    padding-bottom: 0;
+  }
+  p.checkIn-para{
+    line-height: 1.5; 
+    font-size: 80%;
+  }
+  p.checkIn-arrival{
+    font-size:1.5rem;
+  }
+  p.checkIn-inDate{
+    width: auto ;
+    height :5rem;
+    padding :1.5rem;
+    font-size :1.5rem;
+  }
+  /*check in search button*/
+  #search{
+    width: 10rem ;
+    height :4.75rem ;
+    font-size :1.5rem;
+  }
+  
+  section.room-pic{
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr) ;
+  grid-gap: 2rem;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 10rem;
+  
+}
+  h2.rooms-suites
+  {
+    font-size: 350% !important;
+  }
+
+  p.rooms-suites-para{
+    font-size: 150% !important;
+  }
+  div.room1 img{
+    width: 100%;
+    height:450pX;
+  }
+  div.r3{
+    margin-top:2rem;
+  }
+  #book{
+    width: 14rem ;
+    height :4.75rem ;
+    font-size: 2rem;
+    text-align :center ;
+  }
+  div.esc{
+    
+    display: grid;
+    grid-template-columns:3fr 1fr;
+  }
+  input[type=text]{
+	width: 50%;
+  color: #fff ;
+	height: 45px;
+}
+input[type=submit]{
+	margin-left: 2rem;
+}
+
+.copyright{
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+  .copy2 a{
+
+  padding: 0 0.25rem;
+
+}
+
 }
